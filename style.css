@@ -1,0 +1,40 @@
+html, body {
+  font-family: 'Roboto', 'Helvetica', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+textarea {
+	resize: none;
+}
+body {
+	background-color: #e0e0e0;
+}
+#Applejack {
+	margin-left: 360px;
+	margin-top: 10px;
+	margin-bottom: -45px;
+}
+#PinkiePie {
+	position: relative;
+	left: 160px;
+	bottom: 100px;
+	margin-bottom: -50px;
+}
+.input {
+	margin: auto;
+	margin-top: 10px;
+	width: 400px;
+	z-index: 3;
+}
+#notes > div {
+	display: inline-block;
+	margin: 10px;
+}
+.menu {
+	margin-left: 290px;
+	margin-top: -90px;
+}
+#notes {
+	z-index: 1;
+}
+

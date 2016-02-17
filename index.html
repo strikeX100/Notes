@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Заметки</title>
+	<script src='http://code.jquery.com/jquery-2.2.0.min.js'></script>
+	<script src='http://code.jquery.com/ui/1.11.4/jquery-ui.min.js'></script>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" href="https://code.getmdl.io/1.1.1/material.indigo-pink.min.css">
+	<script defer src="https://code.getmdl.io/1.1.1/material.min.js"></script>
+	<script src='script.js' type="text/javascript"></script>
+	<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+	<!-- Always shows a header, even in smaller screens. -->
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+  <header class="mdl-layout__header">
+    <div class="mdl-layout__header-row">
+      <!-- Title -->
+      <span class="mdl-layout-title">Заметки</span>
+      <!-- Add spacer, to align navigation to the right -->
+      <div class="mdl-layout-spacer"></div>
+      
+    </div>
+  </header>
+  <div class="mdl-layout__drawer">
+    <span class="mdl-layout-title">Опции</span>
+    <nav class="mdl-navigation">
+      <a class="mdl-navigation__link" href="">Link</a>
+      <a class="mdl-navigation__link" href="">Link</a>
+      <a class="mdl-navigation__link" href="">Link</a>
+      <a class="mdl-navigation__link" href="">Link</a>
+    </nav>
+  </div>
+  <main class="mdl-layout__content">
+    <div class="page-content"><!-- Your content goes here -->
+    	<div class="input mdl-card mdl-shadow--4dp">
+		<!-- Right aligned menu below button -->
+			<div id="Applejack">
+				<button id="demo-menu-lower-right-0" class="mdl-button mdl-js-button mdl-button--icon">
+  					<i class="material-icons">more_vert</i>
+				</button>
+				<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="demo-menu-lower-right-0">
+  					<li class="mdl-menu__item">Some Action</li>
+  					<li class="mdl-menu__item">Another Action</li>
+				</ul>
+			</div>
+    		<div class="mdl-card__actions">
+    			<div class="mdl-textfield mdl-js-textfield">
+  					<input class="mdl-textfield__input" type="text" maxlength="42" id="header">
+  					<label class="mdl-textfield__label" for="header">Введите заголовок</label>
+				</div>
+			</div>
+		
+			<div class="mdl-card__actions">
+    			<div class="mdl-textfield mdl-js-textfield" id="RainbowDash">
+  					<textarea class="mdl-textfield__input" type="text" rows="3" maxlength="1000" id="note"></textarea>
+  					<label class="mdl-textfield__label" for="note">Новая заметка</label>
+				</div>
+			</div>
+			<button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored" id="PinkiePie">
+  				<i class="material-icons">add</i>
+			</button>			
+		</div>
+		<div id="notes"></div>
+	</div>
+  </main>
+</div>
+</body>
+</html>
