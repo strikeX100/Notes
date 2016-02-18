@@ -37,4 +37,11 @@ body {
 #notes {
 	z-index: 1;
 }
+.mdl-card__title {
+	color: white;
+	background-color: #3f51b5;
+}
+.menu button {
+	color: white;
+}
 
