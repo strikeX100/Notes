@@ -32,7 +32,7 @@ function addNewNote(header, comment, index) {
 	$(note).append(title, text, menu);
 	$("#notes").append(note);
 	var notesBorder = [0, $('header').height(), window.innerWidth - $(note).width() - 20,];
-	$(note).draggable({containment:notesBorder, zIndex:2});
+	$(note).draggable({containment:notesBorder, zIndex: 2});
 	$("input").val("").focus().parent().removeClass('is-dirty');
 	$("textarea").val("").parent().removeClass('is-dirty');
 	componentHandler.upgradeElements(note.get(0));
@@ -40,7 +40,7 @@ function addNewNote(header, comment, index) {
 $(document).ready(function() {
 	var k = 0;
 	var border = [-window.innerWidth/2+$('.input').width()/2+10, $('header').height(), window.innerWidth/2- $('.input').width()/2-10,];
-	$("#PinkiePie").click(function() {
+	$("#addButton").click(function() {
 		new_header = $("input").val();
 		new_comment = $("textarea").val();
 		if (new_header && new_comment) {
@@ -62,5 +62,15 @@ $(document).ready(function() {
 	$('#notes').on('click', 'ul li:last-child', function() {
 		$(this).closest('.note').remove();
 	});
+	/*$('#notes').on('dragstart', '.note', function() {
+		var zIndex = $(this).css('z-index');
+		zIndex++;
+		$(this).css({'z-index':zIndex});
+		var inputZ = $('.input').css('z-index');
+		inputZ++;
+		$('.input').css({'z-index':inputZ});
+		console.log(zIndex);
+		console.log(inputZ);
+	});*/
 	$('.input').draggable({containment:border});
 });
