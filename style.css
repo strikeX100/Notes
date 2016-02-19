@@ -31,8 +31,11 @@ body {
 	margin: 10px;
 }
 .menu {
-	margin-left: 290px;
-	margin-top: -90px;
+	position: relative;
+	left: 290px;
+	bottom: 110px;
+	/*margin-left: 290px;
+	margin-top: -90px;*/
 }
 #notes {
 	z-index: 1;

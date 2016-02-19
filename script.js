@@ -24,6 +24,10 @@ function addNewNote(header, comment, index) {
 	$.each(lang, function() {
     	$('<li/>',{text:this, class:'mdl-menu__item'}).appendTo(mylist);
 	});
+	//Временно
+	mylist[0].childNodes[0].setAttribute('disabled', true);
+	mylist[0].childNodes[1].setAttribute('disabled', true);
+
 	$(menu).append(button, mylist);
 	$(note).append(title, text, menu);
 	$("#notes").append(note);
@@ -32,7 +36,6 @@ function addNewNote(header, comment, index) {
 	$("input").val("").focus().parent().removeClass('is-dirty');
 	$("textarea").val("").parent().removeClass('is-dirty');
 	componentHandler.upgradeElements(note.get(0));
-  	//componentHandler.upgradeAllRegistered();
 }
 $(document).ready(function() {
 	var k = 0;
@@ -54,7 +57,8 @@ $(document).ready(function() {
 				addNewNote(new_header, new_comment, k);
 			}
 		}
-	});
+	});	
+	addNewNote('Заметка', 'Вы можете добавлять и удалять заметки, а также передвигать их по экрану.', 'test');
 	$('#notes').on('click', 'ul li:last-child', function() {
 		$(this).closest('.note').remove();
 	});
